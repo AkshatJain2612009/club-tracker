@@ -5,8 +5,13 @@ import { supabase } from '@/lib/supabase'
 export default function TranscriptPage() {
   const [profile, setProfile] = useState<any>(null)
   const [records, setRecords] = useState<any[]>([])
+  const [date, setDate] = useState('')
 
-  useEffect(() => { fetchData() }, [])
+  useEffect(() => { 
+    // This ensures the date is only calculated on the client device, fixing the Vercel error
+    setDate(new Date().toLocaleDateString())
+    fetchData() 
+  }, [])
 
   async function fetchData() {
     const { data: { user } } = await supabase.auth.getUser()
@@ -33,7 +38,7 @@ export default function TranscriptPage() {
           </div>
           <div className="text-right">
             <p className="text-sm uppercase tracking-tight text-slate-400">Date of Issue</p>
-            <p className="text-xl font-bold">{new Date().toLocaleDateString()}</p>
+            <p className="text-xl font-bold">{date}</p>
           </div>
         </div>
 
@@ -60,7 +65,7 @@ export default function TranscriptPage() {
               ))
             )}
           </tbody>
-        </table >
+        </table>
 
         <div className="flex justify-between items-end mt-20">
           <div className="text-center">
