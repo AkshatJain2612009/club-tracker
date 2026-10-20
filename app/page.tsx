@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="min-h-[calc(100vh-64px)] flex flex-col items-center justify-center px-4 text-center">
+    <div className="min-h-[calc(100vh-64px)] flex flex-col items-center justify-center px-4 text-center bg-gradient-to-br from-blue-50 via-white to-indigo-100">
       <div className="max-w-3xl">
         <span className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-blue-600 uppercase bg-blue-100 rounded-full">
           MSOT Academy Official
@@ -24,3 +24,4 @@ export default function Home() {
     </div>
   )
 }
+

@@ -7,14 +7,8 @@ const nextConfig: NextConfig = {
   },
   cacheComponents: true,
   partialPrefetching: true,
-  turbopack: {
-    rules: {
-      "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
-      },
-    },
-  },
+  // Default CSS handling works with Tailwind; custom loader removed to fix build.
+  turbopack: {},
 };
 
 export default nextConfig;
