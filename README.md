@@ -1,6 +1,6 @@
 # ♣️ MSOT Club Activities Tracker
 
-A professional, full-stack co-curricular management platform designed for MSOT Academy to track club memberships, verify session attendance, and generate academic transcripts.
+A professional, full-stack co-curricular management platform designed for MSOT Academy to track club memberships, verify session attendance, and generate academic transcripts. https://club-tracker-jain.vercel.app/
 
 ## 🚀 Features
 - **Admin Control Panel**: Manage campuses, create clubs, and plan verified activities.
